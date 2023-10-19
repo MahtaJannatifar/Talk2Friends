@@ -1,5 +1,4 @@
 package com.example.talk2friends;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -10,5 +9,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Auth auth = new Auth();
+        Invitation invitation = new Invitation(auth, "mahj7596@gmail.com", this);
+        invitation.sendInvitationEmail();
     }
 }
