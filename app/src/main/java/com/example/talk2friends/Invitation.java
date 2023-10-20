@@ -19,7 +19,7 @@ import org.apache.commons.codec.binary.Base64;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
-
+// To write python scripts to send emails from java
 public class Invitation {
 
     private static final String GMAIL_SCOPE = "https://www.googleapis.com/auth/gmail.send";
