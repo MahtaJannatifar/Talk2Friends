@@ -3,28 +3,20 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
-import java.io.IOException;
 import java.util.Properties;
-import com.google.api.services.gmail.Gmail;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-// TODO: inviting to a specific meeting, make sure to pass meeting ID
+
 public class Invitation {
-    private static final String GMAIL_SCOPE = "https://www.googleapis.com/auth/gmail.send";
-    private String receiverUserEmail;
-    private Auth auth;
-    private GoogleAccountCredential credential;
-    private Gmail gmail;
-    private String systemEmail;
+    private final String receiverUserEmail;
+    private final Auth auth;
     private static Context context;
 
     public Invitation(Auth auth, String receiverUserEmail, Context context) {
-        systemEmail = "talk2friends310@gmail.com";  // Your app's dedicated email for sending invites
         this.auth = auth;
         this.receiverUserEmail = receiverUserEmail;
         Invitation.context = context;
@@ -65,7 +57,7 @@ public class Invitation {
             return null;
         }
     }
-    public void sendInvitationEmail(){
+    public void sendInvitationEmail(String meetingId){
         if(auth.isLoggedIn()){
             // send invite
             String verificationCode =  generateVerificationCode();
@@ -75,7 +67,7 @@ public class Invitation {
             System.out.println("Error, User is not authenticated.");
         }
     }
-    public static void createEmail(String to, String subject, String bodyText) throws MessagingException, IOException {
+    public static void createEmail(String to, String subject, String bodyText) {
         final String username = "talk2friends310@gmail.com";
         final String appPassword = context.getString(R.string.APP_PASSWORD);
 
@@ -105,5 +97,4 @@ public class Invitation {
             throw new RuntimeException(e);
         }
     }
-
 }
