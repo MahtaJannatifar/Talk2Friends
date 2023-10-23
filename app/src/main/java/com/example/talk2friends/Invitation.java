@@ -15,6 +15,7 @@ public class Invitation {
     private final String receiverUserEmail;
     private final Auth auth;
     private static Context context;
+    private String verificationCode;
 
     public Invitation(Auth auth, String receiverUserEmail, Context context) {
         this.auth = auth;
@@ -60,12 +61,15 @@ public class Invitation {
     public void sendInvitationEmail(String meetingId){
         if(auth.isLoggedIn()){
             // send invite
-            String verificationCode =  generateVerificationCode();
+            verificationCode =  generateVerificationCode();
             new SendEmailTask().execute(verificationCode);
         }
         else{
             System.out.println("Error, User is not authenticated.");
         }
+    }
+    public String getVerificationCode(){
+        return verificationCode;
     }
     public static void createEmail(String to, String subject, String bodyText) {
         final String username = "talk2friends310@gmail.com";
