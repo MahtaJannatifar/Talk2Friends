@@ -43,13 +43,27 @@ public class OnlineMeeting extends AppCompatActivity {
         startTime = findViewById(R.id.startTimeSpinner2);
         endTime = findViewById(R.id.endTimeSpinner2);
         chooseStartTime(); // Initialize the start time Spinner
-        EditText editText = findViewById(R.id.topicAnswer2);
-        editText.setOnEditorActionListener(new OnEditorActionListener() {
+        EditText editTextTopic = findViewById(R.id.topicAnswer2);
+
+        EditText editTextZoom = findViewById(R.id.zoomLinkAnswer);
+
+        editTextTopic.setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                    imm.hideSoftInputFromWindow(editTextTopic.getWindowToken(), 0);
+                    return true;
+                }
+                return false;
+            }
+        });
+        editTextZoom.setOnEditorActionListener(new OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(editTextZoom.getWindowToken(), 0);
                     return true;
                 }
                 return false;

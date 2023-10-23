@@ -19,6 +19,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
 import android.view.KeyEvent;
 import android.content.Intent;
+
 public class InPersonMeeting extends AppCompatActivity {
     private String time;
     private String date;
@@ -234,6 +235,7 @@ public class InPersonMeeting extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
     }
 
 

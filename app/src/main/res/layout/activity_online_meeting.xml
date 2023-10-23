@@ -104,6 +104,8 @@
         android:gravity="start|center_vertical"
         android:text="Topic:"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/topicAnswer2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/endTimeSpinner2"
         app:layout_constraintVertical_bias="0.0" />
@@ -112,54 +114,80 @@
         android:id="@+id/topicAnswer2"
         android:layout_width="152dp"
         android:layout_height="50dp"
-        android:layout_marginStart="56dp"
         android:layout_marginTop="24dp"
-        android:gravity="start"
+        android:layout_marginEnd="48dp"
         android:autofillHints="Topic"
-        android:inputType="text"
+        android:gravity="start"
         android:imeOptions="actionDone"
-        android:text=""
-        app:layout_constraintStart_toEndOf="@+id/topic2"
-        app:layout_constraintTop_toBottomOf="@+id/endTimeSpinner2" />
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeSpinner2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/showStartTime2"
-        android:layout_width="230dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="223dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="116dp"
         android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topicAnswer2" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/createButton"
         android:layout_width="107dp"
         android:layout_height="59dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="88dp"
         android:text="Create"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
         app:layout_constraintTop_toBottomOf="@+id/showStartTime2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.111" />
 
     <Button
         android:id="@+id/backButton"
         android:layout_width="107dp"
         android:layout_height="59dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
         android:onClick="onBackPressed"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/createButton"
-        app:layout_constraintHorizontal_bias="0.892"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/showStartTime2"
         app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/zoomLinkAnswer"
+        android:layout_width="352dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="12dp"
+        android:hint="You Zoom Invitation link here"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/showStartTime2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="354dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:text="Click on (https://zoom.us/meeting/schedule) and create the zoom link and then copy and paste the invitation link down below"
+        android:textColorLink="#0000FF"
+        app:layout_constraintBottom_toTopOf="@+id/zoomLinkAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topic2"
+        app:layout_constraintVertical_bias="0.47" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
