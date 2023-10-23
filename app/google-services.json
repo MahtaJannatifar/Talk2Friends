@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "742426112275",
+    "project_id": "talk2friends-fc4ad",
+    "storage_bucket": "talk2friends-fc4ad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:742426112275:android:e1de807e79ff7aca6faae6",
+        "android_client_info": {
+          "package_name": "com.example.talk2friends"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf_JzUMtZP2pzeqtpty0agDv8_CxGorhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

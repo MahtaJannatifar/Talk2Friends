@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -54,11 +55,9 @@ dependencies {
     implementation("com.google.firebase:firebase-auth:22.2.0")
 
     implementation("com.google.apis:google-api-services-gmail:v1-rev29-1.20.0")
-//    implementation("com.sun.mail:javax.mail:1.6.2")
     implementation ("com.sun.mail:android-mail:1.6.5")
     implementation ("com.sun.mail:android-activation:1.6.5")
     implementation ("com.sun.mail:android-mail:1.6.5")
     implementation("com.sun.mail:android-activation:1.6.5")
-
 
 }
