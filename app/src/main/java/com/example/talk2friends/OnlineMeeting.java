@@ -1,6 +1,5 @@
 package com.example.talk2friends;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
@@ -20,23 +19,63 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
 import android.view.KeyEvent;
+import com.example.talk2friends.databinding.ActivityOnlineMeetingBinding;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class OnlineMeeting extends AppCompatActivity {
-//    private String time;
-//    private String date;
-//    private String topic;
-//    private String location;
+
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
     private Spinner startTime;
     private Spinner endTime;
+    private ActivityOnlineMeetingBinding binding;
+    FirebaseDatabase root;
+    DatabaseReference topicReference;
+    DatabaseReference dateReference;
+    DatabaseReference startTimeReference;
+    DatabaseReference EndTimeReference;
+    DatabaseReference locationReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_online_meeting);
-//        time = "10:00 AM";
-//        date = "2023-10-18";
-//        topic = "Android Development";
-//        location = "Conference Room A";
+
+        FirebaseApp.initializeApp(this);
+        binding = ActivityOnlineMeetingBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        FirebaseDatabase root = FirebaseDatabase.getInstance();
+        //topic
+        topicReference = root.getReference("topicOnline");
+        dateReference = root.getReference("dateOnline");
+        startTimeReference = root.getReference("startTimeOnline");
+        EndTimeReference = root.getReference("endTimeOnline");
+        locationReference = root.getReference("locationOnline");
+        // Set a click listener for a button
+        binding.createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //when clicked on crate button, the information inputted will be saved in firebase DB
+                DatabaseReference newTopicReference = topicReference.push();
+                DatabaseReference newDateReference = dateReference.push();
+                DatabaseReference newStartTimeReference = startTimeReference.push();
+                DatabaseReference newEndTimeReference = EndTimeReference.push();
+                DatabaseReference newLocationReference = locationReference.push();
+
+                // Save the user message to the Firebase database under the generated keys
+                newTopicReference.setValue(binding.topicAnswer2.getText().toString());
+                newDateReference.setValue(binding.datePickerButton2.getText().toString());
+                newStartTimeReference.setValue(binding.startTimeSpinner2.getSelectedItem().toString());
+                newEndTimeReference.setValue(binding.endTimeSpinner2.getSelectedItem().toString());
+                newLocationReference.setValue(binding.zoomLinkAnswer.getText().toString());
+
+
+                Intent intent = new Intent(view.getContext(), MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton2);
         dateButton.setText(getTodaysDate());
