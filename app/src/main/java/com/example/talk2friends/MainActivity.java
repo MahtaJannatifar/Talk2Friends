@@ -14,10 +14,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button button = findViewById(R.id.InPersonButton);
         button.setOnClickListener(this::onClickInPerson);
         Button button2 = findViewById(R.id.onlineMeetingButton);
         button2.setOnClickListener(this::onClickOnline);
+        Button button3 = findViewById(R.id.createProfileButton);
+        button3.setOnClickListener(this::onClickCreateProfile);
     }
     public void onClickInPerson(View v){
         Button InPersonButton = findViewById(R.id.InPersonButton);
@@ -34,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ViewMeeting.class);
         startActivity(intent);
     }
+    public void onClickCreateProfile(View v){
+        Button createprofile = findViewById(R.id.createProfileButton);
+        Intent intent = new Intent(this, CreateProfile.class);
+        startActivity(intent);
+    }
+
 }
 
 //create functions to navigate to online meeting or in person meeting pages

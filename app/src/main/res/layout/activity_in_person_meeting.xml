@@ -4,8 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".InPersonMeeting">
-
-    <!-- Choose Date: -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -28,7 +26,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <!-- Date Picker Button -->
     <Button
         android:id="@+id/datePickerButton2"
         android:layout_width="185dp"
@@ -40,7 +37,6 @@
         app:layout_constraintStart_toEndOf="@+id/DateChoose2"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <!-- Choose Start Time: -->
     <TextView
         android:id="@+id/chooseStartTimeTextView2"
         android:layout_width="141dp"
@@ -51,10 +47,6 @@
         android:text="Choose Start Time:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DateChoose2" />
-
-    <!-- Start Time Spinner -->
-
-    <!-- Choose End Time: -->
 
     <Spinner
         android:id="@+id/startTimeSpinner2"
@@ -68,9 +60,6 @@
         app:layout_constraintTop_toBottomOf="@+id/datePickerButton2"
         app:layout_constraintVertical_bias="0.0" />
 
-    <!-- End Time Spinner -->
-
-    <!-- Topic: -->
 
     <TextView
         android:id="@+id/chooseEndTimeTextView2"
