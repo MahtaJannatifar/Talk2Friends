@@ -103,4 +103,7 @@ public class PublicMeeting extends AppCompatActivity {
         Intent intent = new Intent(this, CreateProfile.class);
         startActivity(intent);
     }
+//    public void onClickSeeFriendsList(){
+//
+//    }
 }

@@ -116,9 +116,9 @@ public class RSVPorCancel extends AppCompatActivity {
                 }
             }
         });
-
-
     }
-
-
+    public void onBackPressed(View view){
+        Intent intent = new Intent(this, PublicMeeting.class);
+        startActivity(intent);
+    }
 }

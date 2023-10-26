@@ -104,6 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="44dp"
+        android:onClick="onBackPressed"
         android:text="Button"
         app:layout_constraintBottom_toTopOf="@+id/FirstNameTextView"
         app:layout_constraintEnd_toEndOf="parent"
