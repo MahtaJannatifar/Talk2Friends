@@ -13,12 +13,15 @@
         android:layout_height="49dp"
         android:layout_marginLeft="68dp"
         android:layout_marginTop="40dp"
+        android:gravity="center"
         android:text="Profile Page"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/doneButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/FirstNameAsnwer"
@@ -91,9 +94,8 @@
         android:id="@+id/Affiliation"
         android:layout_width="102dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="33dp"
         android:gravity="center|center_horizontal"
         android:text="Affiliation"
         app:layout_constraintBottom_toTopOf="@+id/interests"
@@ -119,6 +121,7 @@
         android:gravity="center|center_horizontal"
         app:layout_constraintBottom_toTopOf="@+id/doneButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -129,7 +132,7 @@
         android:layout_height="45dp"
 
         android:layout_marginEnd="84dp"
-        android:text="Option 1"
+        android:text="Interest1:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Interest1Answer"
         app:layout_constraintHorizontal_bias="0.84"
@@ -155,7 +158,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="84dp"
-        android:text="Option 2"
+        android:text="Interest2:"
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintEnd_toStartOf="@+id/interest2Answer"
         app:layout_constraintHorizontal_bias="0.875"
@@ -181,7 +184,7 @@
         android:layout_width="119dp"
         android:layout_height="47dp"
         android:layout_marginEnd="92dp"
-        android:text="TextView"
+        android:text="Interest3:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/interest3Answer"
         app:layout_constraintHorizontal_bias="1.0"

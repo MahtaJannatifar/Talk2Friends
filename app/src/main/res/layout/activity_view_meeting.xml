@@ -155,10 +155,11 @@
         app:layout_constraintVertical_bias="0.027" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/GoRSVP"
         android:layout_width="138dp"
         android:layout_height="58dp"
         android:layout_marginTop="520dp"
+        android:onClick="onClickGoRSVP"
         android:text="RSVP/Cancel Reservation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

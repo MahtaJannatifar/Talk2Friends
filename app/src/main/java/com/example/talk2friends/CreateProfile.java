@@ -44,7 +44,7 @@ public class CreateProfile extends AppCompatActivity {
         LastNameReference = root.getReference("lastName");
         AffiliationReference = root.getReference("affiliation");
         InterestsReference = root.getReference("interest");
-        birthDateReference = root.getReference("BirthDate");
+        birthDateReference = root.getReference("Birthdate");
         Interest1Reference = root.getReference("int1");
         Interest2Reference = root.getReference("int2");
         Interest3Reference = root.getReference("int3");
@@ -71,7 +71,7 @@ public class CreateProfile extends AppCompatActivity {
                 newBirthDateReference.setValue(binding.BirthDateAnswer.getText().toString());
 
 
-                Intent intent = new Intent(view.getContext(), MainActivity.class);
+                Intent intent = new Intent(view.getContext(), PublicMeeting.class);
                 startActivity(intent);
 
             }
