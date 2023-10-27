@@ -13,6 +13,32 @@
         android:theme="@style/Theme.Talk2Friends"
         tools:targetApi="31">
         <activity
+            android:name=".ViewListOfParticipants"
+            android:exported="false" />
+        <activity
+            android:name=".RSVPorCancel"
+            android:exported="false" />
+        <activity
+            android:name=".PublicMeeting"
+            android:exported="false" />
+        <activity
+            android:name=".CreateProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ViewMeeting"
+            android:exported="false" />
+        <activity
+            android:name=".publicMeetings"
+            android:exported="false" />
+        <activity
+            android:name=".InPersonMeeting"
+            android:exported="false"
+            android:label="In Person Meeting" />
+        <activity
+            android:name=".OnlineMeeting"
+            android:exported="false"
+            android:label="Online Meeting" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
