@@ -46,11 +46,13 @@ public class SignUp extends AppCompatActivity {
                 DatabaseReference newPasswordReference = PasswordReference.push();
                 DatabaseReference newVerificationReference = VerificationCodeReference.push();
 
-                newEmailReference.setValue(binding.signUpEmail.getText().toString());
+                String email = binding.signUpEmail.getText().toString();
+                newEmailReference.setValue(email);
                 newPasswordReference.setValue(binding.signUpPassword.getText().toString());
                 newVerificationReference.setValue(100);
 
-                Intent intent = new Intent(view.getContext(), MainActivity.class);
+                Intent intent = new Intent(view.getContext(), AuthPage.class);
+                intent.putExtra("email", email);
                 startActivity(intent);
             }
         });
