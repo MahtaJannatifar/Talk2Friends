@@ -32,16 +32,30 @@
         app:layout_constraintVertical_bias="0.011" />
 
     <Button
-        android:id="@+id/buttonBack"
+        android:id="@+id/buttonBack3"
         android:layout_width="115dp"
         android:layout_height="72dp"
         android:layout_marginTop="80dp"
         android:onClick="buttonBackPressed"
         android:text="Back"
         app:layout_constraintBottom_toTopOf="@+id/particiantListView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/invite"
+        android:layout_width="119dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="72dp"
+        android:onClick="inviteParticipant"
+        android:text="Invite"
+        app:layout_constraintBottom_toTopOf="@+id/particiantListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toEndOf="@+id/buttonBack3"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
