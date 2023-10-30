@@ -62,7 +62,6 @@ dependencies {
     implementation ("com.google.firebase:firebase-database:20.0.0")
     implementation ("androidx.databinding:databinding-runtime:7.0.0")
 
-}
     implementation("com.google.android.material:material:1.11.0-alpha03")
 
 // Gmail API
