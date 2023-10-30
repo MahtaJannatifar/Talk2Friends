@@ -49,6 +49,9 @@ public class SignUp extends AppCompatActivity {
                 String email = binding.signUpEmail.getText().toString();
                 newEmailReference.setValue(email);
                 newPasswordReference.setValue(binding.signUpPassword.getText().toString());
+
+                //TODO: GENERATE CODE
+                //TODO: USE MAHTHA'S EMAIL SYSTEM
                 newVerificationReference.setValue(100);
 
                 Intent intent = new Intent(view.getContext(), AuthPage.class);
