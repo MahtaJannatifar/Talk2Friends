@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = new Intent(this, SignUp.class);
+        startActivity(intent);
 
         Button button = findViewById(R.id.InPersonButton);
         button.setOnClickListener(this::onClickInPerson);
