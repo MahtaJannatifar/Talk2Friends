@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -39,7 +40,7 @@ public class ViewListOfParticipants extends AppCompatActivity {
         listView = (ListView) findViewById(R. id.particiantListView) ;
         final ArrayAdapter<String> arrayAdapter =  new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,topicList);
         listView. setAdapter (arrayAdapter);
-        back  = findViewById(R.id.buttonBack);
+        back  = findViewById(R.id.buttonBack3);
 
         reference.addChildEventListener(new ChildEventListener() {
             @Override
@@ -65,6 +66,11 @@ public class ViewListOfParticipants extends AppCompatActivity {
     public void buttonBackPressed(View view){
         Intent intent = new Intent(this, ViewMeeting.class);
         startActivity(intent);
+    }
+    public void inviteParticipant(View view){
+        Intent intent = new Intent(this, InviteActivity.class);
+        startActivity(intent);
+
     }
 
 }

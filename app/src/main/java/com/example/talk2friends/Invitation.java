@@ -16,6 +16,9 @@ public class Invitation {
     private final Auth auth;
     private static Context context;
     private String verificationCode;
+    public interface EmailCallback {
+        void onEmailSent(boolean isSuccessful);
+    }
 
     public Invitation(Auth auth, String receiverUserEmail, Context context) {
         this.auth = auth;
@@ -24,7 +27,7 @@ public class Invitation {
     }
 
     @SuppressLint("StaticFieldLeak")
-    public void sendEmailVerificationCode(final String verificationCode) {
+    public void sendEmailVerificationCode(final String verificationCode, final EmailCallback callback) {
         new AsyncTask<Void, Void, Boolean>() {
             @Override
             protected Boolean doInBackground(Void... voids) {
@@ -42,9 +45,12 @@ public class Invitation {
             protected void onPostExecute(Boolean result) {
                 if (result) {
                     Log.d("EMAIL", "Email sent successfully.");
+                    callback.onEmailSent(true);
                 } else {
                     Log.e("EMAIL", "Failed to send email.");
+                    callback.onEmailSent(true);
                 }
+
             }
         }.execute();
     }
@@ -53,16 +59,22 @@ public class Invitation {
         return String.valueOf((int)(Math.random() * 1000000));
     }
     private class SendEmailTask extends AsyncTask<String, Void, Void> {
+        private final EmailCallback callback;
+
+        private SendEmailTask(EmailCallback callback) {
+            this.callback = callback;
+        }
+
         protected Void doInBackground(String... verificationCodes) {
-            sendEmailVerificationCode(verificationCodes[0]);
+            sendEmailVerificationCode(verificationCodes[0], callback);
             return null;
         }
     }
-    public void sendInvitationEmail(String meetingId){
+    public void sendInvitationEmail(String meetingId,  EmailCallback callback){
         if(auth.isLoggedIn()){
             // send invite
             verificationCode =  generateVerificationCode();
-            new SendEmailTask().execute(verificationCode);
+            new SendEmailTask(callback).execute(verificationCode);
         }
         else{
             System.out.println("Error, User is not authenticated.");
