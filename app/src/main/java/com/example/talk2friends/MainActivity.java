@@ -37,26 +37,12 @@ public class MainActivity extends AppCompatActivity {
         Button viewMeeting = findViewById(R.id.ViewMeetingButton);
         Intent intent = new Intent(this, ViewMeeting.class);
         startActivity(intent);
-
-        Auth auth = new Auth();
-        // TODO: please change this email with the user email
-        User user = new User("jannatif@usc.edu");
-        Invitation invitation = new Invitation(auth, user.getEmail(), this);
-        // to access and verify verification code
-        String code = invitation.getVerificationCode();
-        String meetingId = "1234";
-        // TODO: right now meetingID is doing nothing in the sendInvitationEmail function, so this
-        //  can be used to verify users for sign up too, it will email them the code
-        //  make the UI to accept the verification code & compare it
-        invitation.sendInvitationEmail(meetingId);
-
     }
     public void onClickCreateProfile(View v){
         Button createprofile = findViewById(R.id.createProfileButton);
         Intent intent = new Intent(this, CreateProfile.class);
         startActivity(intent);
     }
-
 }
 
 //create functions to navigate to online meeting or in person meeting pages
