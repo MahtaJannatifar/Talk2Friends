@@ -44,7 +44,9 @@ public class LoginPage extends AppCompatActivity {
                     String storedPassword = dataSnapshot.child("password").getValue(String.class);
                     if (enteredPassword.equals(storedPassword)) {
                         // Passwords match, create auth intent with "email" extra string
-                        Intent intent = new Intent(LoginPage.this, NextActivity.class);
+
+                        // TODO: MAHTHA EMAIL SYSTEM SEND AND PUSH VERIFICATION CODE!!s
+                        Intent intent = new Intent(LoginPage.this, AuthPage.class);
                         intent.putExtra("email", email);
                         startActivity(intent);
                     } else {

@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent intent = new Intent(this, SignUp.class);
+        Intent intent = new Intent(this, LoginPage.class);
         startActivity(intent);
 
         Button button = findViewById(R.id.InPersonButton);
