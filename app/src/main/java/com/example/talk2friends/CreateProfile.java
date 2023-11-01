@@ -8,72 +8,71 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.content.Intent;
 import android.view.View;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
-import com.example.talk2friends.databinding.ActivityCreateProfileBinding;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 import java.util.Calendar;
-public class CreateProfile extends AppCompatActivity {
-    FirebaseDatabase root;
-    DatabaseReference FirstNameReference;
-    DatabaseReference LastNameReference;
-    DatabaseReference birthDateReference;
-    DatabaseReference AffiliationReference;
-    DatabaseReference InterestsReference;
-    DatabaseReference Interest1Reference;
-    DatabaseReference Interest2Reference;
-    DatabaseReference Interest3Reference;
 
+
+//Edit profile
+//sign in
+
+public class CreateProfile extends AppCompatActivity {
     private Button BirthDateAnswer;
-    private ActivityCreateProfileBinding binding;
     private DatePickerDialog datePickerDialog;
-    private Button dateButton;
+    private Button doneButton;
+    private EditText firstNameAnswer;
+    private EditText LastNameAnswer;
+    private Button birthDateAnswer;
+    private Spinner affiliationAnswer;
+    private Spinner Interest1Answer;
+    private Spinner Interest2Answer;
+    private Spinner Interest3Answer;
+    DatabaseReference userRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profile);
-
         FirebaseApp.initializeApp(this);
-        binding = ActivityCreateProfileBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        FirebaseDatabase root = FirebaseDatabase.getInstance();
-        //topic
-        FirstNameReference = root.getReference("firstName");
-        LastNameReference = root.getReference("lastName");
-        AffiliationReference = root.getReference("affiliation");
-        InterestsReference = root.getReference("interest");
-        birthDateReference = root.getReference("Birthdate");
-        Interest1Reference = root.getReference("int1");
-        Interest2Reference = root.getReference("int2");
-        Interest3Reference = root.getReference("int3");
-        binding.doneButton.setOnClickListener(new View.OnClickListener() {
+        doneButton = findViewById(R.id.doneButton);
+        firstNameAnswer = findViewById(R.id.FirstNameAsnwer);
+        LastNameAnswer = findViewById(R.id.LastNameAnswer);
+        birthDateAnswer = findViewById(R.id.BirthDateAnswer);
+        affiliationAnswer = findViewById(R.id.affiliationAnswer);
+        Interest1Answer = findViewById(R.id.Interest1Answer);
+        Interest2Answer = findViewById(R.id.interest2Answer);
+        Interest3Answer = findViewById(R.id.interest3Answer);
+        userRef = FirebaseDatabase.getInstance().getReference().child("users");
+        doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //when clicked on crate button, the information inputted will be saved in firebase DB
-                DatabaseReference newNameReference = FirstNameReference.push();
-                DatabaseReference newLastReference = LastNameReference.push();
-                DatabaseReference newBirthDateReference = birthDateReference.push();
-                DatabaseReference newAffiliateReference = AffiliationReference.push();
-                DatabaseReference newInterest1Reference = Interest1Reference.push();
-                DatabaseReference newInterest2Reference = Interest2Reference.push();
-                DatabaseReference newInterest3Reference = Interest3Reference.push();
-
-
-
-                newNameReference.setValue(binding.FirstNameAsnwer.getText().toString());
-                newLastReference.setValue(binding.LastNameAnswer.getText().toString());
-                newAffiliateReference.setValue(binding.affiliationAnswer.getSelectedItem().toString());
-                newInterest1Reference.setValue(binding.Interest1Answer.getSelectedItem().toString());
-                newInterest2Reference.setValue(binding.interest2Answer.getSelectedItem().toString());
-                newInterest3Reference.setValue(binding.interest3Answer.getSelectedItem().toString());
-                newBirthDateReference.setValue(binding.BirthDateAnswer.getText().toString());
-
-
-                Intent intent = new Intent(view.getContext(), PublicMeeting.class);
-                startActivity(intent);
-
+                String firstNameAnswerString = String.valueOf(firstNameAnswer.getText());
+                String LastNameAnswerString = LastNameAnswer.getText().toString();
+                String birthDateAnswerString = birthDateAnswer.getText().toString();
+                String affiliationAnswerString =  affiliationAnswer.getSelectedItem().toString();
+                String Interest1AnswerString =  Interest1Answer.getSelectedItem().toString();
+                String Interest2AnswerString = Interest2Answer.getSelectedItem().toString();
+                String Interest3AnswerString = Interest3Answer.getSelectedItem().toString();
+                Intent intent = getIntent();
+                String email = intent.getStringExtra("email");
+                String password = intent.getStringExtra("password");
+                DatabaseReference newUserRef = userRef.push();
+                String UserID = (newUserRef).getKey();
+                User user = new User(UserID,email, password,firstNameAnswerString, LastNameAnswerString, birthDateAnswerString, affiliationAnswerString, Interest1AnswerString,Interest2AnswerString,Interest3AnswerString);
+                newUserRef.setValue(user);
+                newUserRef.setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(CreateProfile.this, "user profile create", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                Intent intent2= new Intent(CreateProfile.this, MainActivity.class);
+                startActivity(intent2);
             }
         });
         initDatePicker();

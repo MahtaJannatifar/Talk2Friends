@@ -57,5 +57,6 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
     implementation ("com.google.firebase:firebase-database:20.0.0")
     implementation ("androidx.databinding:databinding-runtime:7.0.0")
+    implementation ("com.google.firebase:firebase-auth:21.0.1")
 
 }

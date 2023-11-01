@@ -1,6 +1,16 @@
 package com.example.talk2friends;
+import static org.json.JSONObject.NULL;
+
+import static java.util.TimeZone.SHORT;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.app.AlertDialog;
@@ -19,10 +29,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
 import android.view.KeyEvent;
 import android.content.Intent;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.DatabaseReference;
 import com.example.talk2friends.databinding.ActivityInPersonMeetingBinding;
+import com.google.firebase.database.ValueEventListener;
 
 public class InPersonMeeting extends AppCompatActivity {
 
@@ -30,54 +46,47 @@ public class InPersonMeeting extends AppCompatActivity {
 
     //firebase
     FirebaseDatabase root;
-    DatabaseReference topicReference;
-    DatabaseReference dateReference;
-    DatabaseReference startTimeReference;
-    DatabaseReference EndTimeReference;
-    DatabaseReference locationReference;
 
     private ActivityInPersonMeetingBinding binding;
     private DatePickerDialog datePickerDialog;
     private Button dateButton;
     private Spinner startTime;
     private Spinner endTime;
-
+    private EditText topicAnswer;
+    private Button date;
+    DatabaseReference meetingsRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         FirebaseApp.initializeApp(this);
-        binding = ActivityInPersonMeetingBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
         FirebaseDatabase root = FirebaseDatabase.getInstance();
-        //topic
-        topicReference = root.getReference("topic");
-        dateReference = root.getReference("date");
-        startTimeReference = root.getReference("startTime");
-        EndTimeReference = root.getReference("endTime");
-        locationReference = root.getReference("location");
-        // Set a click listener for a button
-        binding.createButton.setOnClickListener(new View.OnClickListener() {
+        binding = ActivityInPersonMeetingBinding.inflate(getLayoutInflater());
+        setContentView(R.layout.activity_in_person_meeting);
+        topicAnswer = findViewById(R.id.topicAnswer2);
+        date = findViewById(R.id.datePickerButton2);
+        meetingsRef = FirebaseDatabase.getInstance().getReference().child("meetings");
+        Button createButton = findViewById(R.id.createButton);
+        // Set a click listen   er for a button
+        createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //when clicked on crate button, the information inputted will be saved in firebase DB
-                DatabaseReference newTopicReference = topicReference.push();
-                DatabaseReference newDateReference = dateReference.push();
-                DatabaseReference newStartTimeReference = startTimeReference.push();
-                DatabaseReference newEndTimeReference = EndTimeReference.push();
-                DatabaseReference newLocationReference = locationReference.push();
-
-                // Save the user message to the Firebase database under the generated keys
-                newTopicReference.setValue(binding.topicAnswer2.getText().toString());
-                newDateReference.setValue(binding.datePickerButton2.getText().toString());
-                newStartTimeReference.setValue(binding.startTimeSpinner2.getSelectedItem().toString());
-                newEndTimeReference.setValue(binding.endTimeSpinner2.getSelectedItem().toString());
-                newLocationReference.setValue(binding.locationAnswer.getSelectedItem().toString());
-
-
-                Intent intent = new Intent(view.getContext(), MainActivity.class);
+                String topicAnswerString = String.valueOf(topicAnswer.getText());
+                String dateString = date.getText().toString();
+                String startTimeString =  startTime.getSelectedItem().toString();
+                String endTimeString =  endTime.getSelectedItem().toString();
+                String locationAnswerString = locationAnswer.getSelectedItem().toString();
+                DatabaseReference newMeetingRef = meetingsRef.push();
+                String meetingId = (newMeetingRef).getKey(); // Get the generated ID
+                publicMeetingClass meeting = new publicMeetingClass(meetingId,topicAnswerString, dateString, startTimeString, endTimeString, locationAnswerString);
+                newMeetingRef.setValue(meeting);
+                newMeetingRef.setValue (meeting).addOnSuccessListener (new OnSuccessListener<Void>() {
+                   public void onSuccess(Void aVoid) {
+                       Toast.makeText(InPersonMeeting.this, "Data is Added Added", Toast.LENGTH_SHORT).show();
+                   }
+               });
+                Intent intent = new Intent(InPersonMeeting.this, PublicMeeting.class);
                 startActivity(intent);
-
             }
         });
         initDatePicker();
@@ -292,26 +301,6 @@ public class InPersonMeeting extends AppCompatActivity {
         startActivity(intent);
 
     }
-//    public void onClickCreateButton(View view){
-//        Button createB = findViewById(R.id.createButton);
-//        Intent intent = new Intent(this, MainActivity.class);
-//        startActivity(intent);
-//    }
-
-//    public void create(@NonNull View view, Bundle savedInstanceState) {
-//        root = FirebaseDatabase.getInstance();
-//        reference = root.getReference("ourKey");
-//        binding.createButton.setOnClickListener(new View.OnClickListener() {
-//            public void onClickCreateButton(View view) {
-//                /* when next button is clicked, save the user message to DB */
-//                /* first, call Firebase to the (key, value) we want to edit */
-//
-//                /* then, save the value */
-//                reference.setValue(binding.topicAnswer2.getText().toString());
-//            }
-//        });
-//    }
-
 }
 
 

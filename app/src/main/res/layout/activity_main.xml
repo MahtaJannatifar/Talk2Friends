@@ -19,20 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/ViewMeetingButton"
-        android:layout_width="291dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="156dp"
-        android:onClick="onClickViewMeeting"
-        android:text="View Meeting"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InPersonButton"
-        app:layout_constraintVertical_bias="0.24" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="249dp"
@@ -61,13 +47,12 @@
         android:id="@+id/createProfileButton"
         android:layout_width="282dp"
         android:layout_height="71dp"
-        android:layout_marginTop="56dp"
         android:onClick="oncCickCreateProfile"
-        android:text="create profile"
+        android:text="View List of Public Meetings"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ViewMeetingButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525" />
 </androidx.constraintlayout.widget.ConstraintLayout>

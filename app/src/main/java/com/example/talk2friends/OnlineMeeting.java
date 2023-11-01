@@ -19,7 +19,10 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.content.Context;
 import android.view.KeyEvent;
+import android.widget.Toast;
+
 import com.example.talk2friends.databinding.ActivityOnlineMeetingBinding;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -31,13 +34,10 @@ public class OnlineMeeting extends AppCompatActivity {
     private Spinner startTime;
     private Spinner endTime;
     private ActivityOnlineMeetingBinding binding;
-    FirebaseDatabase root;
-    DatabaseReference topicReference;
-    DatabaseReference dateReference;
-    DatabaseReference startTimeReference;
-    DatabaseReference EndTimeReference;
-    DatabaseReference locationReference;
-
+    private EditText topicAnswer;
+    private Button date;
+    DatabaseReference meetingsRef;
+    private EditText locationAnswer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,34 +46,34 @@ public class OnlineMeeting extends AppCompatActivity {
         binding = ActivityOnlineMeetingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         FirebaseDatabase root = FirebaseDatabase.getInstance();
-        //topic
-        topicReference = root.getReference("topicOnline");
-        dateReference = root.getReference("dateOnline");
-        startTimeReference = root.getReference("startTimeOnline");
-        EndTimeReference = root.getReference("endTimeOnline");
-        locationReference = root.getReference("locationOnline");
-        // Set a click listener for a button
-        binding.createButton.setOnClickListener(new View.OnClickListener() {
+        topicAnswer = findViewById(R.id.topicAnswer2);
+        date = findViewById(R.id.datePickerButton2);
+        startTime = findViewById(R.id.startTimeSpinner2);
+        endTime = findViewById(R.id.endTimeSpinner2);
+        locationAnswer = findViewById(R.id.zoomLinkAnswer);
+        meetingsRef = FirebaseDatabase.getInstance().getReference().child("meetings");
+        Button createButton = findViewById(R.id.createButton);
+        // Set a click listen   er for a button
+        createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //when clicked on crate button, the information inputted will be saved in firebase DB
-                DatabaseReference newTopicReference = topicReference.push();
-                DatabaseReference newDateReference = dateReference.push();
-                DatabaseReference newStartTimeReference = startTimeReference.push();
-                DatabaseReference newEndTimeReference = EndTimeReference.push();
-                DatabaseReference newLocationReference = locationReference.push();
-
-                // Save the user message to the Firebase database under the generated keys
-                newTopicReference.setValue(binding.topicAnswer2.getText().toString());
-                newDateReference.setValue(binding.datePickerButton2.getText().toString());
-                newStartTimeReference.setValue(binding.startTimeSpinner2.getSelectedItem().toString());
-                newEndTimeReference.setValue(binding.endTimeSpinner2.getSelectedItem().toString());
-                newLocationReference.setValue(binding.zoomLinkAnswer.getText().toString());
-
-
-                Intent intent = new Intent(view.getContext(), MainActivity.class);
+                String topicAnswerString = String.valueOf(topicAnswer.getText());
+                String dateString = date.getText().toString();
+                String startTimeString =  startTime.getSelectedItem().toString();
+                String endTimeString =  endTime.getSelectedItem().toString();
+                String locationAnswerString = locationAnswer.getText().toString();
+                DatabaseReference newMeetingRef = meetingsRef.push();
+                String meetingId = (newMeetingRef).getKey(); // Get the generated ID
+                publicMeetingClass meeting = new publicMeetingClass(meetingId,topicAnswerString, dateString, startTimeString, endTimeString, locationAnswerString);
+                newMeetingRef.setValue(meeting);
+                newMeetingRef.setValue (meeting).addOnSuccessListener (new OnSuccessListener<Void>() {
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(OnlineMeeting.this, "Data is Added Added", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                Intent intent = new Intent(OnlineMeeting.this, PublicMeeting.class);
                 startActivity(intent);
-
             }
         });
         initDatePicker();

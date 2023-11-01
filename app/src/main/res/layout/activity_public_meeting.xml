@@ -48,8 +48,8 @@
 
     <ListView
         android:id="@+id/MeetingList"
-        android:layout_width="404dp"
-        android:layout_height="485dp"
+        android:layout_width="383dp"
+        android:layout_height="518dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
