@@ -1,0 +1,172 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InPersonMeeting">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Create In-Person Meeting"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DateChoose2"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Choose Date:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/datePickerButton2"
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2023"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/DateChoose2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/chooseStartTimeTextView2"
+        android:layout_width="141dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Choose Start Time:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateChoose2" />
+
+    <Spinner
+        android:id="@+id/startTimeSpinner2"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/endTimeSpinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chooseStartTimeTextView2"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerButton2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/chooseEndTimeTextView2"
+        android:layout_width="138dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="Choose End Time:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeSpinner2" />
+
+    <Spinner
+        android:id="@+id/endTimeSpinner2"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toEndOf="@+id/chooseEndTimeTextView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topic2"
+        android:layout_width="108dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="24dp"
+        android:gravity="start|center_vertical"
+        android:text="Topic:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeSpinner2" />
+
+    <EditText
+        android:id="@+id/topicAnswer2"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:gravity="left"
+        android:hint="Topic"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/topic2"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeSpinner2" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="116dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="60dp"
+        android:gravity="start|center_vertical"
+        android:text="Location:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topicAnswer2" />
+
+    <Spinner
+        android:id="@+id/locationAnswer"
+        android:layout_width="191dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toEndOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/topicAnswer2" />
+
+    <TextView
+        android:id="@+id/showStartTime2"
+        android:layout_width="230dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationAnswer" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="107dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="onClickCreateButton"
+        android:text="Create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showStartTime2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="107dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="18dp"
+        android:onClick="onBackPressed"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/createButton"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showStartTime2"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

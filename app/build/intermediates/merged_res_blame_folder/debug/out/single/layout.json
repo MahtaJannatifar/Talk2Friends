@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_in_person_meeting.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_in_person_meeting.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_rsvpor_cancel.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_rsvpor_cancel.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_sign_up.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_sign_up.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_view_list_of_participants.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_view_list_of_participants.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_main.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_create_profile.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_create_profile.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_online_meeting.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_online_meeting.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_public_meeting.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_public_meeting.xml"
+    },
+    {
+        "merged": "com.example.talk2friends.app-mergeDebugResources-37:/layout/activity_view_meeting.xml",
+        "source": "com.example.talk2friends.app-main-40:/layout/activity_view_meeting.xml"
+    }
+]

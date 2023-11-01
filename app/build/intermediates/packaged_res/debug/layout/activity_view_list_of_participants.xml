@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewListOfParticipants">
+
+    <ListView
+        android:id="@+id/particiantListView"
+        android:layout_width="411dp"
+        android:layout_height="465dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="208dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Participants"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/particiantListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="115dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="80dp"
+        android:onClick="buttonBackPressed"
+        android:text="Back"
+        app:layout_constraintBottom_toTopOf="@+id/particiantListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <Button
+        android:id="@+id/invite"
+        android:layout_width="115dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="80dp"
+        android:onClick="buttonBackPressed"
+        android:text="Invite "
+        app:layout_constraintBottom_toTopOf="@+id/particiantListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+</androidx.constraintlayout.widget.ConstraintLayout>

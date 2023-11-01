@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">Talk2Friends</string>
+    <string name="gcm_defaultSenderId" translatable="false">742426112275</string>
+    <string name="google_api_key" translatable="false">AIzaSyAf_JzUMtZP2pzeqtpty0agDv8_CxGorhQ</string>
+    <string name="google_app_id" translatable="false">1:742426112275:android:e1de807e79ff7aca6faae6</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAf_JzUMtZP2pzeqtpty0agDv8_CxGorhQ</string>
+    <string name="google_storage_bucket" translatable="false">talk2friends-fc4ad.appspot.com</string>
+    <string name="project_id" translatable="false">talk2friends-fc4ad</string>
+    <string name="textview">TextView</string>
+    <style name="Base.Theme.Talk2Friends" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.Talk2Friends" parent="Base.Theme.Talk2Friends"/>
+</resources>

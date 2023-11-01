@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="openDatePicker"
+    tools:context=".CreateProfile">
+
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="241dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Profile Page"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/doneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/FirstNameAsnwer"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:hint="FirstName"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTitle" />
+
+    <TextView
+        android:id="@+id/FirstName"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center|center_horizontal"
+        android:text="First Name:"
+        app:layout_constraintBottom_toTopOf="@+id/lastName"
+        app:layout_constraintEnd_toStartOf="@+id/FirstNameAsnwer"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lastName"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="71dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center|center_horizontal"
+        android:text="Last Name:"
+        app:layout_constraintBottom_toTopOf="@+id/BirthDate"
+        app:layout_constraintEnd_toStartOf="@+id/LastNameAnswer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/LastNameAnswer"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="LastName"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FirstNameAsnwer" />
+
+    <TextView
+        android:id="@+id/BirthDate"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center|center_horizontal"
+        android:text="Birth Date:"
+        app:layout_constraintBottom_toTopOf="@+id/Affiliation"
+        app:layout_constraintEnd_toStartOf="@+id/BirthDateAnswer"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Affiliation"
+        android:layout_width="102dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="33dp"
+        android:gravity="center|center_horizontal"
+        android:text="Affiliation"
+        app:layout_constraintBottom_toTopOf="@+id/interests"
+        app:layout_constraintEnd_toStartOf="@+id/affiliationAnswer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/affiliationAnswer"
+        android:layout_width="171dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/interests"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/interests"
+        android:layout_width="278dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="405dp"
+        android:gravity="center|center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/doneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/option1"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+
+        android:layout_marginEnd="84dp"
+        android:text="Interest1:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Interest1Answer"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.638" />
+
+    <Spinner
+        android:id="@+id/Interest1Answer"
+        android:layout_width="159dp"
+        android:layout_height="41dp"
+        android:text="in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <TextView
+        android:id="@+id/option2"
+        android:layout_width="120dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="84dp"
+        android:text="Interest2:"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toStartOf="@+id/interest2Answer"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Spinner
+        android:id="@+id/interest2Answer"
+        android:layout_width="163dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Option 4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Interest1Answer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="119dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="92dp"
+        android:text="Interest3:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/interest3Answer"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864" />
+
+    <Spinner
+        android:id="@+id/interest3Answer"
+        android:layout_width="163dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.919"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interest2Answer"
+        app:layout_constraintVertical_bias="0.184" />
+
+    <Button
+        android:id="@+id/doneButton"
+        android:layout_width="116dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.992" />
+
+    <Button
+        android:id="@+id/BirthDateAnswer"
+        android:layout_width="145dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="28dp"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2023"
+        app:layout_constraintBottom_toTopOf="@+id/interests"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.879"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LastNameAnswer"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

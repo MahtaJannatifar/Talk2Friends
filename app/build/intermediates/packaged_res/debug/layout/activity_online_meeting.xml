@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OnlineMeeting">
+    <!-- Choose Date: -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Create Online Meeting"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/DateChoose2"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Choose Date:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <!-- Date Picker Button -->
+    <Button
+        android:id="@+id/datePickerButton2"
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:onClick="openDatePicker"
+        android:text="JAN 01 2023"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/DateChoose2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <!-- Choose Start Time: -->
+    <TextView
+        android:id="@+id/chooseStartTimeTextView2"
+        android:layout_width="141dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Choose Start Time:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateChoose2" />
+
+    <!-- Start Time Spinner -->
+
+    <!-- Choose End Time: -->
+
+    <Spinner
+        android:id="@+id/startTimeSpinner2"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/endTimeSpinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chooseStartTimeTextView2"
+        app:layout_constraintTop_toBottomOf="@+id/datePickerButton2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/chooseEndTimeTextView2"
+        android:layout_width="138dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="44dp"
+        android:gravity="center"
+        android:text="Choose End Time:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startTimeSpinner2" />
+
+    <Spinner
+        android:id="@+id/endTimeSpinner2"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="276dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toEndOf="@+id/chooseEndTimeTextView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/topic2"
+        android:layout_width="108dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:gravity="start|center_vertical"
+        android:text="Topic:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/topicAnswer2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeSpinner2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/topicAnswer2"
+        android:layout_width="152dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:autofillHints="Topic"
+        android:gravity="start"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endTimeSpinner2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/showStartTime2"
+        android:layout_width="223dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="116dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/createButton"
+        android:layout_width="107dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="88dp"
+        android:text="Create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/showStartTime2"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="107dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onBackPressed"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showStartTime2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/zoomLinkAnswer"
+        android:layout_width="352dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="12dp"
+        android:hint="You Zoom Invitation link here"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/showStartTime2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="354dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:text="Click on (https://zoom.us/meeting/schedule) and create the zoom link and then copy and paste the invitation link down below"
+        android:textColorLink="#0000FF"
+        app:layout_constraintBottom_toTopOf="@+id/zoomLinkAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topic2"
+        app:layout_constraintVertical_bias="0.47" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

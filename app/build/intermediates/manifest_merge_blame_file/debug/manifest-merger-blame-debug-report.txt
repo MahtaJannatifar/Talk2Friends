@@ -1,0 +1,369 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.talk2friends"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:22:5-79
+13-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:22:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:23:5-67
+14-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:23:22-64
+15
+16    <permission
+16-->[androidx.core:core:1.9.0] /Users/tinajannatifar/.gradle/caches/transforms-3/11b94905b76d54666e9ea7d1bf2b63fd/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+17        android:name="com.example.talk2friends.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.9.0] /Users/tinajannatifar/.gradle/caches/transforms-3/11b94905b76d54666e9ea7d1bf2b63fd/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.9.0] /Users/tinajannatifar/.gradle/caches/transforms-3/11b94905b76d54666e9ea7d1bf2b63fd/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.example.talk2friends.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.9.0] /Users/tinajannatifar/.gradle/caches/transforms-3/11b94905b76d54666e9ea7d1bf2b63fd/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.9.0] /Users/tinajannatifar/.gradle/caches/transforms-3/11b94905b76d54666e9ea7d1bf2b63fd/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:5:5-56:19
+23        android:allowBackup="true"
+23-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:6:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.9.0] /Users/tinajannatifar/.gradle/caches/transforms-3/11b94905b76d54666e9ea7d1bf2b63fd/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+25        android:dataExtractionRules="@xml/data_extraction_rules"
+25-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:7:9-65
+26        android:debuggable="true"
+27        android:extractNativeLibs="false"
+28        android:fullBackupContent="@xml/backup_rules"
+28-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:8:9-54
+29        android:icon="@mipmap/ic_launcher"
+29-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:9:9-43
+30        android:label="@string/app_name"
+30-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:10:9-41
+31        android:roundIcon="@mipmap/ic_launcher_round"
+31-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:11:9-54
+32        android:supportsRtl="true"
+32-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:12:9-35
+33        android:testOnly="true"
+34        android:theme="@style/Theme.Talk2Friends" >
+34-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:13:9-50
+35        <activity
+35-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:15:9-17:40
+36            android:name="com.example.talk2friends.SignUp"
+36-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:16:13-35
+37            android:exported="false" />
+37-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:17:13-37
+38        <activity
+38-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:18:9-20:40
+39            android:name="com.example.talk2friends.MainActivity2"
+39-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:19:13-42
+40            android:exported="false" />
+40-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:20:13-37
+41        <activity
+41-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:21:9-23:40
+42            android:name="com.example.talk2friends.ViewListOfParticipants"
+42-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:22:13-51
+43            android:exported="false" />
+43-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:23:13-37
+44        <activity
+44-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:24:9-26:40
+45            android:name="com.example.talk2friends.RSVPorCancel"
+45-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:25:13-41
+46            android:exported="false" />
+46-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:26:13-37
+47        <activity
+47-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:27:9-29:40
+48            android:name="com.example.talk2friends.PublicMeeting"
+48-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:28:13-42
+49            android:exported="false" />
+49-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:29:13-37
+50        <activity
+50-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:30:9-32:40
+51            android:name="com.example.talk2friends.CreateProfile"
+51-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:31:13-42
+52            android:exported="false" />
+52-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:32:13-37
+53        <activity
+53-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:33:9-35:40
+54            android:name="com.example.talk2friends.ViewMeeting"
+54-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:34:13-40
+55            android:exported="false" />
+55-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:35:13-37
+56        <activity
+56-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:36:9-38:40
+57            android:name="com.example.talk2friends.publicMeetings"
+57-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:37:13-43
+58            android:exported="false" />
+58-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:38:13-37
+59        <activity
+59-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:39:9-42:49
+60            android:name="com.example.talk2friends.InPersonMeeting"
+60-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:40:13-44
+61            android:exported="false"
+61-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:41:13-37
+62            android:label="In Person Meeting" />
+62-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:42:13-46
+63        <activity
+63-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:43:9-46:46
+64            android:name="com.example.talk2friends.OnlineMeeting"
+64-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:44:13-42
+65            android:exported="false"
+65-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:45:13-37
+66            android:label="Online Meeting" />
+66-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:46:13-43
+67        <activity
+67-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:47:9-55:20
+68            android:name="com.example.talk2friends.MainActivity"
+68-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:48:13-41
+69            android:exported="true" >
+69-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:49:13-36
+70            <intent-filter>
+70-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:50:13-54:29
+71                <action android:name="android.intent.action.MAIN" />
+71-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:51:17-69
+71-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:51:25-66
+72
+73                <category android:name="android.intent.category.LAUNCHER" />
+73-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:53:17-77
+73-->/Users/tinajannatifar/Desktop/USC/Fall2023/CS310/Talk2Friends/app/src/main/AndroidManifest.xml:53:27-74
+74            </intent-filter>
+75        </activity>
+76
+77        <service
+77-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/84a363733c55b7c0da4bba1b203cd358/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:9:9-15:19
+78            android:name="com.google.firebase.components.ComponentDiscoveryService"
+78-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/84a363733c55b7c0da4bba1b203cd358/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:10:13-84
+79            android:directBootAware="true"
+79-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+80            android:exported="false" >
+80-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/84a363733c55b7c0da4bba1b203cd358/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:11:13-37
+81            <meta-data
+81-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/84a363733c55b7c0da4bba1b203cd358/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:12:13-14:85
+82                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseLegacyRegistrar"
+82-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/84a363733c55b7c0da4bba1b203cd358/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:13:17-127
+83                android:value="com.google.firebase.components.ComponentRegistrar" />
+83-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/84a363733c55b7c0da4bba1b203cd358/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:14:17-82
+84            <meta-data
+84-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:29:13-31:85
+85                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+85-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:30:17-120
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:31:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:32:13-34:85
+88                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+88-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:33:17-109
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-database:20.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/fae709736411eecdb9bebf54808f0a75/transformed/firebase-database-20.3.0/AndroidManifest.xml:34:17-82
+90            <meta-data
+90-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:77:13-79:85
+91                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+91-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:78:17-109
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:79:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/ac9a40d8b56ca21df0af9e1e5b13b4fa/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+94                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+94-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/ac9a40d8b56ca21df0af9e1e5b13b4fa/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/ac9a40d8b56ca21df0af9e1e5b13b4fa/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+97                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+97-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+99        </service>
+100
+101        <activity
+101-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:27:9-44:20
+102            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+102-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:28:13-80
+103            android:excludeFromRecents="true"
+103-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:29:13-46
+104            android:exported="true"
+104-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:30:13-36
+105            android:launchMode="singleTask"
+105-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:31:13-44
+106            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+106-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:32:13-72
+107            <intent-filter>
+107-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:33:13-43:29
+108                <action android:name="android.intent.action.VIEW" />
+108-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
+108-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
+109
+110                <category android:name="android.intent.category.DEFAULT" />
+110-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+110-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+111                <category android:name="android.intent.category.BROWSABLE" />
+111-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
+111-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+112
+113                <data
+113-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
+114                    android:host="firebase.auth"
+114-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
+115                    android:path="/"
+115-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
+116                    android:scheme="genericidp" />
+116-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
+117            </intent-filter>
+118        </activity>
+119        <activity
+119-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:45:9-62:20
+120            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+120-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:46:13-79
+121            android:excludeFromRecents="true"
+121-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:47:13-46
+122            android:exported="true"
+122-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:48:13-36
+123            android:launchMode="singleTask"
+123-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:49:13-44
+124            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+124-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:50:13-72
+125            <intent-filter>
+125-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:51:13-61:29
+126                <action android:name="android.intent.action.VIEW" />
+126-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:34:17-69
+126-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:34:25-66
+127
+128                <category android:name="android.intent.category.DEFAULT" />
+128-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+128-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+129                <category android:name="android.intent.category.BROWSABLE" />
+129-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:37:17-78
+129-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:37:27-75
+130
+131                <data
+131-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:39:17-42:51
+132                    android:host="firebase.auth"
+132-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:40:21-49
+133                    android:path="/"
+133-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:41:21-37
+134                    android:scheme="recaptcha" />
+134-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:42:21-48
+135            </intent-filter>
+136        </activity>
+137
+138        <service
+138-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:64:9-73:19
+139            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+139-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:65:13-101
+140            android:enabled="true"
+140-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:66:13-35
+141            android:exported="false" >
+141-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:67:13-37
+142            <intent-filter>
+142-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:68:13-72:29
+143                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+143-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:69:17-89
+143-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:69:25-86
+144
+145                <category android:name="android.intent.category.DEFAULT" />
+145-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:36:17-76
+145-->[com.google.firebase:firebase-auth:21.0.1] /Users/tinajannatifar/.gradle/caches/transforms-3/d9ba279617d5434c0b387ef46f07863b/transformed/firebase-auth-21.0.1/AndroidManifest.xml:36:27-73
+146            </intent-filter>
+147        </service>
+148
+149        <provider
+149-->[androidx.emoji2:emoji2:1.2.0] /Users/tinajannatifar/.gradle/caches/transforms-3/83e68f7926ebe85388f03774da9fa7f5/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+150            android:name="androidx.startup.InitializationProvider"
+150-->[androidx.emoji2:emoji2:1.2.0] /Users/tinajannatifar/.gradle/caches/transforms-3/83e68f7926ebe85388f03774da9fa7f5/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+151            android:authorities="com.example.talk2friends.androidx-startup"
+151-->[androidx.emoji2:emoji2:1.2.0] /Users/tinajannatifar/.gradle/caches/transforms-3/83e68f7926ebe85388f03774da9fa7f5/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+152            android:exported="false" >
+152-->[androidx.emoji2:emoji2:1.2.0] /Users/tinajannatifar/.gradle/caches/transforms-3/83e68f7926ebe85388f03774da9fa7f5/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+153            <meta-data
+153-->[androidx.emoji2:emoji2:1.2.0] /Users/tinajannatifar/.gradle/caches/transforms-3/83e68f7926ebe85388f03774da9fa7f5/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+154                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+154-->[androidx.emoji2:emoji2:1.2.0] /Users/tinajannatifar/.gradle/caches/transforms-3/83e68f7926ebe85388f03774da9fa7f5/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+155                android:value="androidx.startup" />
+155-->[androidx.emoji2:emoji2:1.2.0] /Users/tinajannatifar/.gradle/caches/transforms-3/83e68f7926ebe85388f03774da9fa7f5/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+156            <meta-data
+156-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/tinajannatifar/.gradle/caches/transforms-3/fc8d73e4cd7f070e778cf560fc319da5/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+157                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+157-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/tinajannatifar/.gradle/caches/transforms-3/fc8d73e4cd7f070e778cf560fc319da5/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+158                android:value="androidx.startup" />
+158-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/tinajannatifar/.gradle/caches/transforms-3/fc8d73e4cd7f070e778cf560fc319da5/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+159            <meta-data
+159-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+160                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+160-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+161                android:value="androidx.startup" />
+161-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+162        </provider>
+163
+164        <activity
+164-->[com.google.android.gms:play-services-base:18.1.0] /Users/tinajannatifar/.gradle/caches/transforms-3/3c19fc2bbd87dd62c81ba23c93205df3/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+165            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+165-->[com.google.android.gms:play-services-base:18.1.0] /Users/tinajannatifar/.gradle/caches/transforms-3/3c19fc2bbd87dd62c81ba23c93205df3/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+166            android:exported="false"
+166-->[com.google.android.gms:play-services-base:18.1.0] /Users/tinajannatifar/.gradle/caches/transforms-3/3c19fc2bbd87dd62c81ba23c93205df3/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+167            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+167-->[com.google.android.gms:play-services-base:18.1.0] /Users/tinajannatifar/.gradle/caches/transforms-3/3c19fc2bbd87dd62c81ba23c93205df3/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+168
+169        <provider
+169-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+170            android:name="com.google.firebase.provider.FirebaseInitProvider"
+170-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+171            android:authorities="com.example.talk2friends.firebaseinitprovider"
+171-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+172            android:directBootAware="true"
+172-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+173            android:exported="false"
+173-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+174            android:initOrder="100" />
+174-->[com.google.firebase:firebase-common:20.4.2] /Users/tinajannatifar/.gradle/caches/transforms-3/71aa4c2c7a188baf4debc4c982273f29/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+175
+176        <meta-data
+176-->[com.google.android.gms:play-services-basement:18.1.0] /Users/tinajannatifar/.gradle/caches/transforms-3/9230e3d0e2305662fe4ecfcd5d45f275/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+177            android:name="com.google.android.gms.version"
+177-->[com.google.android.gms:play-services-basement:18.1.0] /Users/tinajannatifar/.gradle/caches/transforms-3/9230e3d0e2305662fe4ecfcd5d45f275/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+178            android:value="@integer/google_play_services_version" />
+178-->[com.google.android.gms:play-services-basement:18.1.0] /Users/tinajannatifar/.gradle/caches/transforms-3/9230e3d0e2305662fe4ecfcd5d45f275/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+179
+180        <receiver
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+181            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+181-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+182            android:directBootAware="false"
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+183            android:enabled="true"
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+184            android:exported="true"
+184-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+185            android:permission="android.permission.DUMP" >
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+186            <intent-filter>
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+187                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+187-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+187-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+188            </intent-filter>
+189            <intent-filter>
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+190                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+190-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+191            </intent-filter>
+192            <intent-filter>
+192-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+193                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+194            </intent-filter>
+195            <intent-filter>
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+196                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+196-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tinajannatifar/.gradle/caches/transforms-3/af539d90ce3b76d4b1325308606b0b97/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+197            </intent-filter>
+198        </receiver>
+199    </application>
+200
+201</manifest>
